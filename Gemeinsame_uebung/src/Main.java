@@ -24,10 +24,14 @@ public class Main {
 		thorsten.setVorname("Thorsten");
 		thorsten.setNachname("Lorenz");
 
-		sea.add(null);
+		Object o = new Object();
+		o = null;
+		
+		sea.add(o);
+		sea.add(thomas);
 		sea.add(agata);
-		sea.add(null);
-		//sea.add(thorsten);
+		sea.add(zeljko);
+		sea.add(thorsten);
 
 		System.out.println(sea.size());
 		System.out.println("Ausgabe nach anmelden");
@@ -52,7 +56,7 @@ public class Main {
 	//	sea.remove(thomas);
 	//	sea.remove(agata);
 	//	sea.remove(null);
-		sea.remove(thorsten);
+	//	sea.remove(thorsten);
 		
 		
 		System.out.println("Ausgabe nach abmelden" + " Anzahl: " + sea.size());
