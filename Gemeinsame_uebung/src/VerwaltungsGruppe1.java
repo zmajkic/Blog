@@ -1,13 +1,10 @@
 
-public class VerwaltungsGruppe1 implements VerwaltungsInterface{
+public class VerwaltungsGruppe1 implements MyList{
 	
-	private Teilnehmer[] listeDerTeilnehmer = new Teilnehmer[15];
+	private Object[] listeDerTeilnehmer = new Object[15];
 	private int count = 0;
 	
-	
-	
-	
-	public boolean anmelden(Teilnehmer p) {
+		public boolean add(Object p) {
 		boolean result = false;
 		//Duplicate check
 		for (int i = 0; i< listeDerTeilnehmer.length; i++) {
@@ -27,10 +24,8 @@ public class VerwaltungsGruppe1 implements VerwaltungsInterface{
 		}
 		return result;
 	}
-	
-
-	
-	public boolean abmelden(Teilnehmer p) {
+		
+	public boolean abmelden(Object p) {
 		boolean result = false;
 		for (int i = 0; i< listeDerTeilnehmer.length; i++) {
 			if (listeDerTeilnehmer[i] == p) {
@@ -46,7 +41,7 @@ public class VerwaltungsGruppe1 implements VerwaltungsInterface{
 		return result;
 	}
 
-	public Teilnehmer getTeilnehmer(int index) {
+	public Object get(int index) {
 		if (index < this.listeDerTeilnehmer.length && index >=0) {
 			return this.listeDerTeilnehmer[index];
 		} else {
@@ -54,9 +49,9 @@ public class VerwaltungsGruppe1 implements VerwaltungsInterface{
 		}
 	}
 	
-	public Teilnehmer[] getAll() {
+	public Object[] getAll() {
 
-		Teilnehmer[] result = new Teilnehmer[count];
+		Object[] result = new Object[count];
 		for (int i = 0; i< listeDerTeilnehmer.length; i++) {
 			if (listeDerTeilnehmer[i] != null) {
 				for (int j = 0; j< result.length; j++) {
@@ -69,18 +64,18 @@ public class VerwaltungsGruppe1 implements VerwaltungsInterface{
 		return result;
 	}
 	
-	public int anzahlTeilnehmer() {
+	public int size() {
 		return this.count;
 	}
 	
 	public void clear() {
 		//TODO
 	}
-	public boolean contains(Teilnehmer p) {
+	public boolean contains(Object p) {
 		//TODO
 		return false;
 	}
-	public int indexOf(Teilnehmer p) {
+	public int indexOf(Object p) {
 		//TODO
 		return -1;
 	}	

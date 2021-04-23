@@ -1,4 +1,4 @@
-public class Teilnehmer {
+public class Object {
 	
 	private String vorname;
 	private String nachname;
@@ -22,7 +22,7 @@ public class Teilnehmer {
 	}
 	
 	//equals
-	public boolean equals(Teilnehmer p) {
+	public boolean equals(Object p) {
 		if (p == null) {
 			System.out.println("Übergebene Person ist null");
 			return false;

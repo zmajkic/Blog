@@ -1,15 +1,15 @@
 
-public class VerwaltungsGruppe2 implements VerwaltungsInterface{
+public class VerwaltungsGruppe2 implements MyList{
 
-	public int anzahl = 4;
+	public int arraylaenge = 4;
+	public int count = 0;
+	private Object[] liste = new Object[arraylaenge];
 
-	private Teilnehmer[] liste = new Teilnehmer[anzahl];
-
-	public boolean anmelden(Teilnehmer einTeilnehmer) {
-		for (int i = 0; i < anzahl; i++) {
+	public boolean add(Object einTeilnehmer) {
+		for (int i = 0; i < arraylaenge; i++) {
 			if (liste[i] == null) {
 				liste[i] = einTeilnehmer;
-
+				count++;
 				// System.out.println(i);
 				// System.out.println(liste[i]);
 				return true;
@@ -20,20 +20,11 @@ public class VerwaltungsGruppe2 implements VerwaltungsInterface{
 		return false;
 	}
 
-	public int anzahlTeilnehmer() {
-		for (int i = 0; i < anzahl; i++) {
-			if (liste[i] == null) {
-
-				// System.out.println(i);
-				return i;
-			}
-
-		}
-		// System.out.println(anzahl);
-		return anzahl;
+	public int size() {
+		return count;
 	}
 
-	public Teilnehmer getTeilnehmer(int i) {
+	public Object get(int i) {
 		if (liste[i] == null) {
 			return null;
 		}
@@ -43,9 +34,9 @@ public class VerwaltungsGruppe2 implements VerwaltungsInterface{
 
 	}
 
-	public boolean abmelden(Teilnehmer einTeilnehmer) {
+	public boolean abmelden(Object einTeilnehmer) {
 		int derLetzte = 0;
-		for (int j = 0; j < anzahl; j++) {
+		for (int j = 0; j < arraylaenge; j++) {
 			if (liste[j] == null) {
 				derLetzte = j - 1;
 				System.out.println(derLetzte);
@@ -59,7 +50,7 @@ public class VerwaltungsGruppe2 implements VerwaltungsInterface{
 			return false;
 		}
 
-		for (int i = 0; i < anzahl; i++) {
+		for (int i = 0; i < arraylaenge; i++) {
 			if (einTeilnehmer == liste[i]) {
 
 				// System.out.println(liste[i] + " wurde Abgemeldet");

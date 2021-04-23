@@ -4,32 +4,32 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		VerwaltungsInterface sea = new VerwaltungsGruppe1();
+		MyList sea = new VerwaltungsGruppe2();
 		//VerwaltungsGruppe1 sea = new VerwaltungsGruppe1();
 	    //VerwaltungsGruppe2 sea = new VerwaltungsGruppe2();
 		
-		Teilnehmer thomas = new Teilnehmer();
+		Object thomas = new Object();
 		thomas.setVorname("Thomas");
 		thomas.setNachname("Horchem");
 
-		Teilnehmer agata = new Teilnehmer();
+		Object agata = new Object();
 		agata.setVorname("Agata");
 		agata.setNachname("Rubin-Jung");
 
-		Teilnehmer zeljko = new Teilnehmer();
+		Object zeljko = new Object();
 		zeljko.setVorname("Zeljko");
 		zeljko.setNachname("Majkic");
 
-		Teilnehmer thorsten = new Teilnehmer();
+		Object thorsten = new Object();
 		thorsten.setVorname("Thorsten");
 		thorsten.setNachname("Lorenz");
 
-		sea.anmelden(thomas);
-		sea.anmelden(agata);
-		sea.anmelden(zeljko);
-		sea.anmelden(thorsten);
+		sea.add(thomas);
+		sea.add(agata);
+		sea.add(zeljko);
+		sea.add(thorsten);
 
-		sea.anzahlTeilnehmer();
+		sea.size();
 	//	var teilnehmer = sea.getTeilnehmer(3);
 	//	System.out.println(teilnehmer.getVorname() + " " + teilnehmer.getNachname());
 
@@ -38,15 +38,18 @@ public class Main {
 	//	sea.abmelden(zeljko);
 	//	sea.abmelden(thorsten);
 
+		System.out.println(sea.size());
 		for (int i = 0; i < 4; i++) {
-			if (sea.getTeilnehmer(i) == null) {
+			if (sea.get(i) == null) {
 				System.out.println("Teilnehmer " + i + " wurde abgemeldet");
 			} else {
 			//	System.out.println(sea.getTeilnehmer(i));
-				System.out.println(sea.getTeilnehmer(i).getVorname());
+				System.out.println(((Object)sea.get(i)).getVorname());
 			}
 		}
 
+		
+		
 	}
 
 }
