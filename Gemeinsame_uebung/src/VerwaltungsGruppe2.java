@@ -37,34 +37,23 @@ public class VerwaltungsGruppe2 implements MyList {
 	}
 
 	
-		
+	
+	
+	
 	
 	public boolean remove(Object obj) {                // 
-if (count == 0) {
-	
-	return false;
-	
-}
-		for (int i = 0; i < count - 1; i++) {          // weil count bei 1 anfängt und array bei 0 -1 
-                                                        
-			if (obj == liste[i]) {                     
+
+		for (int i = 0; i < count - 2; i++) {          // weil count bei 1 anfängt und array bei 0 -1 
+                                                       // weil der letzte nur überschrieben wird auch -1 
+			if (obj == liste[i]) {                     // in Summe -2
 				liste[i] = liste[count - 1];
 				liste[count - 1] = null;
 				count--;
 				return true;
 			} 
-<<<<<<< Upstream, based on branch 'main' of git@github.com:zmajkic/Blog.git
 
-=======
-		}
-			if (obj==liste[count-1]) {
-				liste[count-1]=null;
-				count--;
-				return true;
-			
->>>>>>> 8342fe5 pruefung wenn leer
 		}
 		return false;
 	}
-	
+
 }
