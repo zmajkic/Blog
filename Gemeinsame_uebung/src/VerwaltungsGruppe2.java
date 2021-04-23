@@ -2,90 +2,59 @@ import java.util.Arrays;
 
 public class VerwaltungsGruppe2 implements MyList {
 
-	public int arraylaenge = 4;
-	public int count = 0;
-	private Object[] liste = new Object[arraylaenge];
+	public int arraylaenge = 4;                       // gesamte ArrayLaenge
+	public int count = 0;                             // Anzahl der angemeldeten Objekte
+	private Object[] liste = new Object[arraylaenge]; // Array liste erstellen   arraylaenge4 -> String0,1,2,3
 
-	public boolean add(Object einTeilnehmer) {
+	
+	
+	
+	public boolean add(Object einTeilnehmer) {         // add Methode
 		if (count < arraylaenge) {
-			liste[count] = einTeilnehmer;
+			liste[count] = einTeilnehmer;              // belege den ersten freien Platz 
 			count++;
 			return true;
 		} else {
 			return false;
 		}
 
-		/*
-		 * for (int i = 0; i < arraylaenge; i++) { if (liste[i] == null) { liste[i] =
-		 * einTeilnehmer; count++; // System.out.println(i); //
-		 * System.out.println(liste[i]); return true; } }
-		 * 
-		 * // System.out.println("false"); return false;
-		 */
 	}
 
-	public int size() {
+	
+	public int size() {                                // size gibt aus wieviele angemeldet sind
 		return count;
 	}
 
-	public Object get(int i) {
-		/*
-		 * if (liste[i] == null) { return null; }
-		 */
-		// System.out.println(liste[i]);
-		// System.out.println(Arrays.toString(liste));
+	
+	
+	
+	public Object get(int i) {                         // gibt einen Wert zurück wenn innerhalb der ArrayLänge
+
 		if (i < arraylaenge) {
 			return liste[i];
 		} else
 			return null;
 	}
 
-	public boolean remove(Object obj) {
+	
+	
+	
+	
+	
+	public boolean remove(Object obj) {                // 
 
-		for (int i = 0; i < count -2; i++) {
-			
-
-			if (obj == liste[i]) {
-				liste[i] = liste[count-1];
-				liste[count-1] = null;
+		for (int i = 0; i < count - 2; i++) {          // weil count bei 1 anfängt und array bei 0 -1 
+                                                       // weil der letzte nur überschrieben wird auch -1 
+			if (obj == liste[i]) {                     // in Summe -2
+				liste[i] = liste[count - 1];
+				liste[count - 1] = null;
 				count--;
 				return true;
 
 			}
-			
-	
-				
-				
-				
-			}
-			return false;
+
 		}
-	
-
-	/*
-	 * public boolean remove(Object object) {
-	 * 
-	 * /* int derLetzte = 0; for (int j = 0; j < arraylaenge; j++) { if (liste[j] ==
-	 * null) { derLetzte = j - 1; System.out.println(derLetzte); break; }else {
-	 * derLetzte = j; } }
-	 * 
-	 * if (derLetzte < 0) { return false; }
-	 */
-	/*
-	 * for (int i = 0; i < arraylaenge; i++) { if (object == liste[i]) { liste[i] =
-	 * null; count--; return true; // System.out.println(liste[i] +
-	 * " wurde Abgemeldet");
-	 */
-
-	// liste[i] = liste[derLetzte]; liste[derLetzte] = null; return true;
-
-	/*
-	 * }
-	 * 
-	 * } return false;
-	 * 
-	 * }
-	 * 
-	 */
+		return false;
+	}
 
 }
