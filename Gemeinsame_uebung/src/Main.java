@@ -24,31 +24,50 @@ public class Main {
 		thorsten.setVorname("Thorsten");
 		thorsten.setNachname("Lorenz");
 
-		sea.add(thomas);
+		sea.add(null);
 		sea.add(agata);
-		sea.add(zeljko);
-		sea.add(thorsten);
-
-		sea.size();
-	//	var teilnehmer = sea.getTeilnehmer(3);
-	//	System.out.println(teilnehmer.getVorname() + " " + teilnehmer.getNachname());
-
-	//	sea.abmelden(thomas);
-	//	sea.abmelden(agata);
-	//	sea.abmelden(zeljko);
-	//	sea.abmelden(thorsten);
+		sea.add(null);
+		//sea.add(thorsten);
 
 		System.out.println(sea.size());
+		System.out.println("Ausgabe nach anmelden");
 		for (int i = 0; i < 4; i++) {
 			if (sea.get(i) == null) {
-				System.out.println("Teilnehmer " + i + " wurde abgemeldet");
+				System.out.println(  i + " is null ");
 			} else {
 			//	System.out.println(sea.getTeilnehmer(i));
 				System.out.println(((Object)sea.get(i)).getVorname());
 			}
 		}
+		
+		
+		
+		
+		System.out.println("Anzahl: " + sea.size());
+		
+		sea.size();
+	//	var teilnehmer = sea.getTeilnehmer(3);
+	//	System.out.println(teilnehmer.getVorname() + " " + teilnehmer.getNachname());
+
+	//	sea.remove(thomas);
+	//	sea.remove(agata);
+	//	sea.remove(null);
+		sea.remove(thorsten);
+		
+		
+		System.out.println("Ausgabe nach abmelden" + " Anzahl: " + sea.size());
 
 		
+		for (int i = 0; i < 4; i++) {
+			if (sea.get(i) == null) {
+				System.out.println( i + " is null");
+			} else {
+			//	System.out.println(sea.getTeilnehmer(i));
+				System.out.println(((Object)sea.get(i)).getVorname());
+			}
+		}
+	
+
 		
 	}
 

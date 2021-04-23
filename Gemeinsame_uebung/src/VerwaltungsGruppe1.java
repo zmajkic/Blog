@@ -25,7 +25,7 @@ public class VerwaltungsGruppe1 implements MyList{
 		return result;
 	}
 		
-	public boolean abmelden(Object p) {
+	public boolean remove(Object p) {
 		boolean result = false;
 		for (int i = 0; i< listeDerTeilnehmer.length; i++) {
 			if (listeDerTeilnehmer[i] == p) {
