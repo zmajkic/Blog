@@ -50,8 +50,7 @@ public class VerwaltungsGruppe2 implements MyList {
 				liste[count - 1] = null;
 				count--;
 				return true;
-
-			}
+			} 
 
 		}
 		return false;
