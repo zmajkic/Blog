@@ -38,9 +38,6 @@ public class VerwaltungsGruppe2 implements MyList {
 
 	
 	
-	
-	
-	
 	public boolean remove(Object obj) {
 		if (count == 0) {
 			return false;
@@ -64,7 +61,5 @@ public class VerwaltungsGruppe2 implements MyList {
 		return false;
 	}
 
-	
-	//z
 	
 }
