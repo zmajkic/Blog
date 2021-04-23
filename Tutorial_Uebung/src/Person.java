@@ -9,5 +9,3 @@ public class Person {
 	
 	    
 }
-
-//test
