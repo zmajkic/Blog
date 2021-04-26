@@ -56,6 +56,7 @@ public class Main {
 
 	//	sea.remove(thomas);
 	//	sea.remove(agata);
+		
 	//	sea.remove(null);
 	//	sea.remove(thorsten);
 		
