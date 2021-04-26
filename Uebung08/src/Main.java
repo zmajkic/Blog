@@ -27,6 +27,7 @@ public class Main {
 		Object o = new Object();
 		o = null;
 		
+		
 		sea.add(o);
 		sea.add(thomas);
 		sea.add(agata);
