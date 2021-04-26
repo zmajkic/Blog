@@ -7,6 +7,8 @@ public class Main {
 		System.out.println("Hello Maven");
 		
 		
+		// test2
+		
 	}
 
 }
