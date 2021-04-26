@@ -24,7 +24,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>Hallo</mainClass>
+							<mainClass>Main</mainClass> <!--  name der Java Klasse -->
 						</manifest>
 					</archive>
 				</configuration>
